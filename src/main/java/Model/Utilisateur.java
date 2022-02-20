@@ -14,9 +14,11 @@ import lombok.NoArgsConstructor;
 @Entity
 @EqualsAndHashCode(callSuper = true )
 
-@Table(name="LigneCdeF")
+@Table(name="Utilisateur")
 
 
-public class LigneCdeF extends AbstractEntity {
+public class Utilisateur extends AbstractEntity{
+	
+	private String nom ;
 
 }

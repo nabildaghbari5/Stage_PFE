@@ -1,6 +1,6 @@
 package Model;
 
-import java.math.BigDecimal;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -18,16 +18,16 @@ import lombok.NoArgsConstructor;
 @Entity
 @EqualsAndHashCode(callSuper = true )
 
-@Table(name="LigneDistribution")
+@Table(name="LigneCdeFournisseur")
 
-
-public class LigneDistribution  extends AbstractEntity {
-  
+public class LigneCdeFournisseur extends AbstractEntity {
 	
-	@ManyToOne 
-	@JoinColumn(name="iddistribution")
-	private Distribution distribution ;
+	@ManyToOne
+	@JoinColumn(name="idmédicaments")
+	private Médicaments médicaments ;
 	
-	private BigDecimal quantite ;
+	@ManyToOne
+	@JoinColumn(name="idcommandefournisseur")
+	private List<CommandeFournisseur> CommandeFournisseur ;
 	
 }

@@ -18,5 +18,7 @@ import lombok.NoArgsConstructor;
 
 
 public class Distribution extends AbstractEntity {
+	
+	private String code ;
 
 }

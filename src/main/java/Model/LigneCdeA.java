@@ -1,7 +1,5 @@
 package Model;
 
-import java.math.BigDecimal;
-
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -18,16 +16,18 @@ import lombok.NoArgsConstructor;
 @Entity
 @EqualsAndHashCode(callSuper = true )
 
-@Table(name="LigneDistribution")
+@Table(name="Lignecdeagée")
 
 
-public class LigneDistribution  extends AbstractEntity {
-  
+public class LigneCdeA extends AbstractEntity {
 	
-	@ManyToOne 
-	@JoinColumn(name="iddistribution")
-	private Distribution distribution ;
 	
-	private BigDecimal quantite ;
+	@ManyToOne
+	@JoinColumn(name="idmédicaments")
+	private Médicaments médicaments ;
 	
+	@ManyToOne
+	@JoinColumn(name="idcommandeAgées")
+	private CommandeAgées commandeAgées ;
+
 }

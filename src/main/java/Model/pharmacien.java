@@ -42,7 +42,7 @@ public class pharmacien extends AbstractEntity {
 	
 	 
 	@OneToMany(mappedBy="pharmacien")
-	private List<CommandePh> CommandePh ; 
+	private List<CommandeFournisseur> CommandePh ; 
 	
 	
 	
